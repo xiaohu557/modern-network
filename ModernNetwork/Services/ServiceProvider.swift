@@ -64,6 +64,9 @@ public class ServiceProvider<Endpoint: EndpointType>: ServiceProviderType {
         
         return task
     }
+}
+
+extension ServiceProvider {
     
     private func checkHTTPURLResponse(_ response: HTTPURLResponse) -> NetworkError? {
         switch response.statusCode {

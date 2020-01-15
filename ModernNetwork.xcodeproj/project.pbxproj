@@ -10,6 +10,15 @@
 		0A5EA2B923C7792B00FC3519 /* ModernNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5EA2AF23C7792A00FC3519 /* ModernNetwork.framework */; };
 		0A5EA2BE23C7792B00FC3519 /* ModernNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2BD23C7792B00FC3519 /* ModernNetworkTests.swift */; };
 		0A5EA2C023C7792B00FC3519 /* ModernNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5EA2B223C7792A00FC3519 /* ModernNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A5EA2CA23C788E800FC3519 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2C923C788E800FC3519 /* Endpoint.swift */; };
+		0A5EA2CD23C78B7200FC3519 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2CC23C78B7200FC3519 /* HTTPMethod.swift */; };
+		0A5EA2CF23C78C2300FC3519 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2CE23C78C2300FC3519 /* HTTPTask.swift */; };
+		0A5EA2D223C78CDE00FC3519 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2D123C78CDE00FC3519 /* ParameterEncoder.swift */; };
+		0A5EA2D423C78E5400FC3519 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2D323C78E5400FC3519 /* NetworkError.swift */; };
+		0A5EA2D723C7927D00FC3519 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2D623C7927D00FC3519 /* URLParameterEncoder.swift */; };
+		0A5EA2D923C8EA9C00FC3519 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2D823C8EA9C00FC3519 /* JSONParameterEncoder.swift */; };
+		0A5EA2DB23C8EE9800FC3519 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2DA23C8EE9800FC3519 /* ServiceProvider.swift */; };
+		0A8564F423CF715E00A31BBB /* Error+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8564F323CF715E00A31BBB /* Error+NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +38,15 @@
 		0A5EA2B823C7792B00FC3519 /* ModernNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModernNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5EA2BD23C7792B00FC3519 /* ModernNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernNetworkTests.swift; sourceTree = "<group>"; };
 		0A5EA2BF23C7792B00FC3519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5EA2C923C788E800FC3519 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		0A5EA2CC23C78B7200FC3519 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		0A5EA2CE23C78C2300FC3519 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		0A5EA2D123C78CDE00FC3519 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		0A5EA2D323C78E5400FC3519 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0A5EA2D623C7927D00FC3519 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		0A5EA2D823C8EA9C00FC3519 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		0A5EA2DA23C8EE9800FC3519 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		0A8564F323CF715E00A31BBB /* Error+NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+NetworkError.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,9 @@
 			children = (
 				0A5EA2B223C7792A00FC3519 /* ModernNetwork.h */,
 				0A5EA2B323C7792A00FC3519 /* Info.plist */,
+				0A5EA2CB23C788F000FC3519 /* Endpoint */,
+				0A5EA2D023C78CAD00FC3519 /* Encoding */,
+				0A5EA2D523C78E6300FC3519 /* Services */,
 			);
 			path = ModernNetwork;
 			sourceTree = "<group>";
@@ -84,6 +105,36 @@
 				0A5EA2BF23C7792B00FC3519 /* Info.plist */,
 			);
 			path = ModernNetworkTests;
+			sourceTree = "<group>";
+		};
+		0A5EA2CB23C788F000FC3519 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EA2C923C788E800FC3519 /* Endpoint.swift */,
+				0A5EA2CC23C78B7200FC3519 /* HTTPMethod.swift */,
+				0A5EA2CE23C78C2300FC3519 /* HTTPTask.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		0A5EA2D023C78CAD00FC3519 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EA2D123C78CDE00FC3519 /* ParameterEncoder.swift */,
+				0A5EA2D623C7927D00FC3519 /* URLParameterEncoder.swift */,
+				0A5EA2D823C8EA9C00FC3519 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		0A5EA2D523C78E6300FC3519 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EA2D323C78E5400FC3519 /* NetworkError.swift */,
+				0A5EA2DA23C8EE9800FC3519 /* ServiceProvider.swift */,
+				0A8564F323CF715E00A31BBB /* Error+NetworkError.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +199,7 @@
 				TargetAttributes = {
 					0A5EA2AE23C7792A00FC3519 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					0A5EA2B723C7792B00FC3519 = {
 						CreatedOnToolsVersion = 11.3;
@@ -195,6 +247,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8564F423CF715E00A31BBB /* Error+NetworkError.swift in Sources */,
+				0A5EA2D423C78E5400FC3519 /* NetworkError.swift in Sources */,
+				0A5EA2CF23C78C2300FC3519 /* HTTPTask.swift in Sources */,
+				0A5EA2D723C7927D00FC3519 /* URLParameterEncoder.swift in Sources */,
+				0A5EA2CD23C78B7200FC3519 /* HTTPMethod.swift in Sources */,
+				0A5EA2DB23C8EE9800FC3519 /* ServiceProvider.swift in Sources */,
+				0A5EA2CA23C788E800FC3519 /* Endpoint.swift in Sources */,
+				0A5EA2D923C8EA9C00FC3519 /* JSONParameterEncoder.swift in Sources */,
+				0A5EA2D223C78CDE00FC3519 /* ParameterEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +401,7 @@
 		0A5EA2C423C7792B00FC3519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xi.chen.ModernNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +426,7 @@
 		0A5EA2C523C7792B00FC3519 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,6 +450,7 @@
 		0A5EA2C723C7792B00FC3519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ModernNetworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +468,7 @@
 		0A5EA2C823C7792B00FC3519 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ModernNetworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

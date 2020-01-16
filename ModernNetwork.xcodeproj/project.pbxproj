@@ -19,6 +19,7 @@
 		0A5EA2D923C8EA9C00FC3519 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2D823C8EA9C00FC3519 /* JSONParameterEncoder.swift */; };
 		0A5EA2DB23C8EE9800FC3519 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2DA23C8EE9800FC3519 /* ServiceProvider.swift */; };
 		0A8564F423CF715E00A31BBB /* Error+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8564F323CF715E00A31BBB /* Error+NetworkError.swift */; };
+		1568C88B23D0792600B1FE5D /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C88A23D0792600B1FE5D /* ExampleService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0A5EA2D823C8EA9C00FC3519 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		0A5EA2DA23C8EE9800FC3519 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		0A8564F323CF715E00A31BBB /* Error+NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+NetworkError.swift"; sourceTree = "<group>"; };
+		1568C88A23D0792600B1FE5D /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				0A5EA2CB23C788F000FC3519 /* Endpoint */,
 				0A5EA2D023C78CAD00FC3519 /* Encoding */,
 				0A5EA2D523C78E6300FC3519 /* Services */,
+				1568C88A23D0792600B1FE5D /* ExampleService.swift */,
 			);
 			path = ModernNetwork;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				0A5EA2D423C78E5400FC3519 /* NetworkError.swift in Sources */,
 				0A5EA2CF23C78C2300FC3519 /* HTTPTask.swift in Sources */,
 				0A5EA2D723C7927D00FC3519 /* URLParameterEncoder.swift in Sources */,
+				1568C88B23D0792600B1FE5D /* ExampleService.swift in Sources */,
 				0A5EA2CD23C78B7200FC3519 /* HTTPMethod.swift in Sources */,
 				0A5EA2DB23C8EE9800FC3519 /* ServiceProvider.swift in Sources */,
 				0A5EA2CA23C788E800FC3519 /* Endpoint.swift in Sources */,

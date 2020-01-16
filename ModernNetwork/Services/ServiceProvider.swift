@@ -32,7 +32,6 @@ public protocol ServiceProviderType: AnyObject {
 }
 
 public class ServiceProvider<Endpoint: EndpointType>: ServiceProviderType {
-    
     public func request(_ endpoint: Endpoint,
                         callbackQueue: DispatchQueue? = DispatchQueue.main,
                         completion: @escaping RequestCompletion) -> Cancellable? {

@@ -14,7 +14,7 @@ enum GitHubService {
 
 extension GitHubService: EndpointType {
     var baseURL: URL {
-        return URL(string: "https://api.github.com/")!
+        return URL(string: "https://api.github.com")!
     }
 
     var path: String {
@@ -36,7 +36,7 @@ extension GitHubService: EndpointType {
         case .hottestRepositories(let count):
             let params = ["sort": "stars",
                           "order": "desc",
-                          //"q": "created:>`date -v-3d '+%Y-%m-%d'`",
+                          "q": "created:>`date -v-3d '+%Y-%m-%d'`",
                           "page": "1",
                           "per_page": "\(count)"]
             return .requestWith(payload: params, encoding: .URLEncoding)

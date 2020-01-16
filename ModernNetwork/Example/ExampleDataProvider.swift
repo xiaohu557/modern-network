@@ -9,29 +9,31 @@
 import Foundation
 
 protocol GithubDataProviderType {
-    var hottestRepos: [Repo]? { get }
-    var error: NetworkError? { get }
-    func getHottestRepos(completion: @escaping (Result<[Repo], NetworkError>) -> Void)
+    var hottestRepos: Observable<[Repo]> { get }
+    var error: Observable<NetworkError?> { get }
+    func fetchData()
 }
 
-class DataProvider {
+class GithubDataProvider: GithubDataProviderType {
     let githubService = ServiceProvider<GitHubService>()
 
-    var hottestRepos: [Repo]? // TODO: Transform to observable
-    var error: NetworkError? // TODO: Transform to observable
+    let hottestRepos = Observable<[Repo]>([])
+    let error = Observable<NetworkError?>(nil)
 
-    init() {
+    func fetchData() {
         getHottestRepos { [weak self] result in
             switch result {
             case .success(let repos):
-                self?.hottestRepos = repos
+                self?.hottestRepos.accept(repos)
             case .failure(let error):
-                self?.error = error
+                self?.error.accept(error)
             }
         }
     }
+}
 
-    func getHottestRepos(completion: @escaping (Result<[Repo], NetworkError>) -> Void) {
+extension GithubDataProvider {
+    private func getHottestRepos(completion: @escaping (Result<[Repo], NetworkError>) -> Void) {
         let _ = githubService.request(.hottestRepositories(count: 2)) { result in
 
             switch result {

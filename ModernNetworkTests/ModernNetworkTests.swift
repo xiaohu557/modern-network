@@ -10,32 +10,12 @@ import XCTest
 @testable import ModernNetwork
 
 class ModernNetworkTests: XCTestCase {
-    let dataProvider = GithubDataProvider()
 
     override func setUp() {
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testFetchHottestRepos() {
-        let e = expectation(description: "Load data from network")
-        e.expectedFulfillmentCount = 2
-
-        dataProvider.hottestRepos.bind { value in
-            if value.count == 2 {
-                e.fulfill()
-            }
-        }
-        dataProvider.error.bind { error in
-            if error == nil {
-                e.fulfill()
-            }
-        }
-        dataProvider.fetchData()
-
-        wait(for: [e], timeout: 15)
     }
 
     func testPerformanceExample() {

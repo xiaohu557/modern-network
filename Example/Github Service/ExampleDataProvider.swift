@@ -6,7 +6,7 @@
 //  Copyright © 2020 Xi Chen. All rights reserved.
 //
 
-import Foundation
+import ModernNetwork
 
 protocol GithubDataProviderType {
     var hottestRepos: Observable<[Repo]> { get }

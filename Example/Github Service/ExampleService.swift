@@ -6,7 +6,7 @@
 //  Copyright © 2020 Xi Chen. All rights reserved.
 //
 
-import Foundation
+import ModernNetwork
 
 enum GitHubService {
     case hottestRepositories(count: Int)
@@ -36,7 +36,7 @@ extension GitHubService: EndpointType {
         case .hottestRepositories(let count):
             let params = ["sort": "stars",
                           "order": "desc",
-                          "q": "created:>2019-01-01",
+                          "q": "created:>2019-11-01",
                           "page": "1",
                           "per_page": "\(count)"]
             return .requestWith(payload: params, encoding: .URLEncoding)

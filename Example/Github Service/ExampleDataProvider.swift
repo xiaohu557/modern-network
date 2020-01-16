@@ -21,7 +21,7 @@ class GithubDataProvider: GithubDataProviderType {
     let error = Observable<NetworkError?>(nil)
 
     func fetchData() {
-        getHottestRepos(count: 10) { [weak self] result in
+        getHottestRepos(count: 1) { [weak self] result in
             switch result {
             case .success(let repos):
                 self?.hottestRepos.accept(repos)

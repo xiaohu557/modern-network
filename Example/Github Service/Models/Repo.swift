@@ -15,13 +15,15 @@ struct Repo: Decodable {
     let isPrivate: Bool
     let htmlUrl: String
     let description: String
-    let createAt: Date
+    let createdAt: Date
+    let updatedAt: Date
     let starsCount: Int
     let watchersCount: Int
     var language: String?
     let forksCount: Int
     let openIssuesCount: Int
     let score: Double
+    let owner: Owner
 }
 
 extension Repo {
@@ -32,12 +34,14 @@ extension Repo {
         case isPrivate = "private"
         case htmlUrl = "html_url"
         case description = "description"
-        case createAt = "created_at"
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
         case starsCount = "stargazers_count"
         case watchersCount = "watchers_count"
         case language = "language"
         case forksCount = "forks_count"
         case openIssuesCount = "open_issues_count"
         case score = "score"
+        case owner = "owner"
     }
 }

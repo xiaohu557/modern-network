@@ -20,6 +20,9 @@
 		0A5EA2DB23C8EE9800FC3519 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EA2DA23C8EE9800FC3519 /* ServiceProvider.swift */; };
 		0A8564F423CF715E00A31BBB /* Error+NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8564F323CF715E00A31BBB /* Error+NetworkError.swift */; };
 		1568C88B23D0792600B1FE5D /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C88A23D0792600B1FE5D /* ExampleService.swift */; };
+		1568C88D23D0805800B1FE5D /* ExampleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C88C23D0805800B1FE5D /* ExampleDataProvider.swift */; };
+		1584EB3023D082D000718EF0 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584EB2F23D082D000718EF0 /* Repo.swift */; };
+		1584EB3223D082E000718EF0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584EB3123D082E000718EF0 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		0A5EA2DA23C8EE9800FC3519 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		0A8564F323CF715E00A31BBB /* Error+NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+NetworkError.swift"; sourceTree = "<group>"; };
 		1568C88A23D0792600B1FE5D /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; };
+		1568C88C23D0805800B1FE5D /* ExampleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDataProvider.swift; sourceTree = "<group>"; };
+		1584EB2F23D082D000718EF0 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		1584EB3123D082E000718EF0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,7 @@
 				0A5EA2CB23C788F000FC3519 /* Endpoint */,
 				0A5EA2D023C78CAD00FC3519 /* Encoding */,
 				0A5EA2D523C78E6300FC3519 /* Services */,
-				1568C88A23D0792600B1FE5D /* ExampleService.swift */,
+				1568C88E23D080C300B1FE5D /* Example */,
 			);
 			path = ModernNetwork;
 			sourceTree = "<group>";
@@ -138,6 +144,25 @@
 				0A8564F323CF715E00A31BBB /* Error+NetworkError.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1568C88E23D080C300B1FE5D /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				1568C88A23D0792600B1FE5D /* ExampleService.swift */,
+				1568C88C23D0805800B1FE5D /* ExampleDataProvider.swift */,
+				1584EB3323D0830200718EF0 /* Models */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		1584EB3323D0830200718EF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1584EB2F23D082D000718EF0 /* Repo.swift */,
+				1584EB3123D082E000718EF0 /* Owner.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,12 +275,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1584EB3223D082E000718EF0 /* Owner.swift in Sources */,
 				0A8564F423CF715E00A31BBB /* Error+NetworkError.swift in Sources */,
 				0A5EA2D423C78E5400FC3519 /* NetworkError.swift in Sources */,
 				0A5EA2CF23C78C2300FC3519 /* HTTPTask.swift in Sources */,
+				1584EB3023D082D000718EF0 /* Repo.swift in Sources */,
 				0A5EA2D723C7927D00FC3519 /* URLParameterEncoder.swift in Sources */,
 				1568C88B23D0792600B1FE5D /* ExampleService.swift in Sources */,
 				0A5EA2CD23C78B7200FC3519 /* HTTPMethod.swift in Sources */,
+				1568C88D23D0805800B1FE5D /* ExampleDataProvider.swift in Sources */,
 				0A5EA2DB23C8EE9800FC3519 /* ServiceProvider.swift in Sources */,
 				0A5EA2CA23C788E800FC3519 /* Endpoint.swift in Sources */,
 				0A5EA2D923C8EA9C00FC3519 /* JSONParameterEncoder.swift in Sources */,

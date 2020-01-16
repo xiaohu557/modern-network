@@ -13,6 +13,7 @@ public enum NetworkError: Error {
     case badResponse
     case missingURL
     case encodingFailed
+    case decodingFailed
     case unauthorized
     case general(description: String)
 }
@@ -24,6 +25,7 @@ extension NetworkError: CustomStringConvertible {
         case .badResponse: return "Response seems to be wrong."
         case .missingURL: return "URL missing in the request."
         case .encodingFailed: return "Parameter encoding failed."
+        case .decodingFailed: return "Response decoding failed."
         case .unauthorized: return "Authentication required."
         case .general(let description): return description
         }

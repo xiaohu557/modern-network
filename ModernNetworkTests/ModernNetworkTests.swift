@@ -10,9 +10,10 @@ import XCTest
 @testable import ModernNetwork
 
 class ModernNetworkTests: XCTestCase {
+    let githubService = ServiceProvider<GitHubService>()
 
-    
     override func setUp() {
+        
     }
 
     override func tearDown() {

@@ -41,7 +41,9 @@ extension GithubDataProvider {
                 completion(.failure(error))
             case .success(let data):
                 do {
-                    let response = try JSONDecoder().decode(SearchResponse.self,
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .iso8601
+                    let response = try decoder.decode(SearchResponse.self,
                                                             from: data)
                     completion(.success(response.items))
                 } catch {

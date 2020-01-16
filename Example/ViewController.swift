@@ -10,6 +10,7 @@ import UIKit
 import ModernNetwork
 
 class ViewController: UIViewController {
+    private let dataProvider = GithubDataProvider()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,6 @@ class ViewController: UIViewController {
     }
 
     private func loadData() {
-        let dataProvider = GithubDataProvider()
         dataProvider.hottestRepos.bind { value in
             print(value)
         }

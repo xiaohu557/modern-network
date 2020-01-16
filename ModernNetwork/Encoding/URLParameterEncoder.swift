@@ -20,7 +20,7 @@ public struct URLParameterEncoder: ParameterEncoder {
             var queryItems = [URLQueryItem]()
             
             for (key, value) in parameters {
-                let stringValue = "\(value)".addingPercentEncoding(withAllowedCharacters: .urlPasswordAllowed)
+                let stringValue = String(describing: value)
                 let queryItem = URLQueryItem(name: key, value: stringValue)
                 queryItems.append(queryItem)
             }
@@ -30,7 +30,7 @@ public struct URLParameterEncoder: ParameterEncoder {
             newRequest.url = urlComponents.url
         }
         
-        newRequest.setValue("application/x-www-form-urlencoded; charset=utf-8",
+        newRequest.setValue("application/x-www-form-urlencoded",
                             forHTTPHeaderField: "Content-Type")
         
         return newRequest

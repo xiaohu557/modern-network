@@ -43,7 +43,8 @@ extension GitHubService: EndpointType {
         }
     }
 
+
     var headers: HTTPHeaders? {
-        return ["Content-type": "application/json"]
+        return nil
     }
 }

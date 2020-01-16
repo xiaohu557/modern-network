@@ -18,7 +18,14 @@ extension URLSessionTask: Cancellable {}
 
 public protocol ServiceProviderType: AnyObject {
     associatedtype Endpoint: EndpointType
-    
+
+    /**
+     Execute the network request.
+     - Parameter endpoint: The endpoint object contains the necessary information to construct the network request.
+     - Parameter callbackQueue: The dispatch queue you want the completion handler to be called within. The default value is the main dispatch queue.
+     - Parameter completion: The completion handler to call when the network request is completed.
+     - Returns: A reference object that can be used to cancel an on-going request.
+     */
     func request(_ endpoint: Endpoint,
                  callbackQueue: DispatchQueue?,
                  completion: @escaping RequestCompletion) -> Cancellable?
@@ -26,7 +33,9 @@ public protocol ServiceProviderType: AnyObject {
 
 public class ServiceProvider<Endpoint: EndpointType>: ServiceProviderType {
     
-    public func request(_ endpoint: Endpoint, callbackQueue: DispatchQueue?, completion: @escaping RequestCompletion) -> Cancellable? {
+    public func request(_ endpoint: Endpoint,
+                        callbackQueue: DispatchQueue? = DispatchQueue.main,
+                        completion: @escaping RequestCompletion) -> Cancellable? {
         
         let session = URLSession.shared
         var task: URLSessionTask? = nil
@@ -37,29 +46,40 @@ public class ServiceProvider<Endpoint: EndpointType>: ServiceProviderType {
             task = session.dataTask(with: request, completionHandler: { [weak self] data, response, error in
                 
                 if let error = error  {
-                    completion(.failure(error.toNetworkError()))
+                    callbackQueue?.async {
+                        completion(.failure(error.toNetworkError()))
+                    }
                     return
                 }
                 
                 guard let response = response as? HTTPURLResponse else {
-                    completion(.failure(NetworkError.serviceUnavailable))
+                    callbackQueue?.async {
+                        completion(.failure(NetworkError.serviceUnavailable))
+                    }
                     return
                 }
                 
-                if let networkError = self?.checkHTTPURLResponse(response) {
-                    completion(.failure(networkError))
-                    return
+                if let networkError = self?.extractError(from: response) {
+                    callbackQueue?.async {
+                        completion(.failure(networkError))
+                    }
                 } else {
                     if let data = data {
-                        completion(.success(data))
+                        callbackQueue?.async {
+                            completion(.success(data))
+                        }
                     } else {
-                        completion(.failure(NetworkError.badResponse))
+                        callbackQueue?.async {
+                            completion(.failure(NetworkError.badResponse))
+                        }
                     }
                 }
             })
         
         } catch {
-            completion(.failure(error.toNetworkError()))
+            callbackQueue?.async {
+                completion(.failure(error.toNetworkError()))
+            }
         }
         
         return task
@@ -67,8 +87,7 @@ public class ServiceProvider<Endpoint: EndpointType>: ServiceProviderType {
 }
 
 extension ServiceProvider {
-    
-    private func checkHTTPURLResponse(_ response: HTTPURLResponse) -> NetworkError? {
+    private func extractError(from response: HTTPURLResponse) -> NetworkError? {
         switch response.statusCode {
         case 200...299: return nil
         case 401...403: return .unauthorized
@@ -78,7 +97,8 @@ extension ServiceProvider {
     }
     
     private func buildRequest(for endpoint: Endpoint) throws -> URLRequest {
-        var request = URLRequest(url: endpoint.baseURL.appendingPathComponent(endpoint.path),
+        let fullURL = endpoint.baseURL.appendingPathComponent(endpoint.path)
+        var request = URLRequest(url: fullURL,
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
                                  timeoutInterval: 15.0)
         

@@ -59,7 +59,7 @@ public class ServiceProvider<Endpoint: EndpointType>: ServiceProviderType {
                     }
                     return
                 }
-                
+
                 if let networkError = self?.extractError(from: response) {
                     callbackQueue?.async {
                         completion(.failure(networkError))

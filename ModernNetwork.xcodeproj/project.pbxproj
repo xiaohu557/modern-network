@@ -26,6 +26,7 @@
 		15551EB923D0D6470004C8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15551EB823D0D6470004C8A7 /* Assets.xcassets */; };
 		15551EBC23D0D6470004C8A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15551EBA23D0D6470004C8A7 /* LaunchScreen.storyboard */; };
 		15CD30B523D094F4003B5DC6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CD30B423D094F4003B5DC6 /* Observable.swift */; };
+		15F1B6CD23D103F0004A0944 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F1B6CC23D103F0004A0944 /* SearchResponse.swift */; };
 		15FD89BE23D0D783002BA9BF /* ModernNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5EA2AF23C7792A00FC3519 /* ModernNetwork.framework */; };
 		15FD89BF23D0D783002BA9BF /* ModernNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5EA2AF23C7792A00FC3519 /* ModernNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15FD89C323D0D7B4002BA9BF /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C88A23D0792600B1FE5D /* ExampleService.swift */; };
@@ -94,6 +95,7 @@
 		1584EB2F23D082D000718EF0 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		1584EB3123D082E000718EF0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		15CD30B423D094F4003B5DC6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		15F1B6CC23D103F0004A0944 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			children = (
 				1584EB2F23D082D000718EF0 /* Repo.swift */,
 				1584EB3123D082E000718EF0 /* Owner.swift */,
+				15F1B6CC23D103F0004A0944 /* SearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				15551EB423D0D6460004C8A7 /* ViewController.swift in Sources */,
 				15FD89C623D0D7BE002BA9BF /* Owner.swift in Sources */,
 				15551EB023D0D6460004C8A7 /* AppDelegate.swift in Sources */,
+				15F1B6CD23D103F0004A0944 /* SearchResponse.swift in Sources */,
 				15FD89C523D0D7BE002BA9BF /* Repo.swift in Sources */,
 				15551EB223D0D6460004C8A7 /* SceneDelegate.swift in Sources */,
 				15FD89C423D0D7B8002BA9BF /* ExampleDataProvider.swift in Sources */,

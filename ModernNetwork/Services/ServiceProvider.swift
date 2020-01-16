@@ -74,7 +74,9 @@ public class ServiceProvider<Endpoint: EndpointType>: ServiceProviderType {
                     }
                 }
             })
-        
+
+            task?.resume()
+
         } catch {
             callbackQueue?.async {
                 completion(.failure(error.toNetworkError()))

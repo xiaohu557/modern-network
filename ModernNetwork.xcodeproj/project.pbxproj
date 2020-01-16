@@ -23,6 +23,7 @@
 		1568C88D23D0805800B1FE5D /* ExampleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568C88C23D0805800B1FE5D /* ExampleDataProvider.swift */; };
 		1584EB3023D082D000718EF0 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584EB2F23D082D000718EF0 /* Repo.swift */; };
 		1584EB3223D082E000718EF0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1584EB3123D082E000718EF0 /* Owner.swift */; };
+		15CD30B523D094F4003B5DC6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CD30B423D094F4003B5DC6 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1568C88C23D0805800B1FE5D /* ExampleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDataProvider.swift; sourceTree = "<group>"; };
 		1584EB2F23D082D000718EF0 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		1584EB3123D082E000718EF0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		15CD30B423D094F4003B5DC6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				0A5EA2D023C78CAD00FC3519 /* Encoding */,
 				0A5EA2D523C78E6300FC3519 /* Services */,
 				1568C88E23D080C300B1FE5D /* Example */,
+				15CD30B423D094F4003B5DC6 /* Observable.swift */,
 			);
 			path = ModernNetwork;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				0A5EA2CD23C78B7200FC3519 /* HTTPMethod.swift in Sources */,
 				1568C88D23D0805800B1FE5D /* ExampleDataProvider.swift in Sources */,
 				0A5EA2DB23C8EE9800FC3519 /* ServiceProvider.swift in Sources */,
+				15CD30B523D094F4003B5DC6 /* Observable.swift in Sources */,
 				0A5EA2CA23C788E800FC3519 /* Endpoint.swift in Sources */,
 				0A5EA2D923C8EA9C00FC3519 /* JSONParameterEncoder.swift in Sources */,
 				0A5EA2D223C78CDE00FC3519 /* ParameterEncoder.swift in Sources */,
@@ -434,8 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -459,8 +465,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

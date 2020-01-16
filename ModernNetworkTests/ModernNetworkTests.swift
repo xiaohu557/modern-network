@@ -35,7 +35,7 @@ class ModernNetworkTests: XCTestCase {
         }
         dataProvider.fetchData()
 
-        wait(for: [e], timeout: 5.0)
+        wait(for: [e], timeout: 15)
     }
 
     func testPerformanceExample() {

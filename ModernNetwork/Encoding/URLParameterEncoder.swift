@@ -15,11 +15,12 @@ public struct URLParameterEncoder: ParameterEncoder {
         
         var newRequest = request
 
-        if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) {
+        if var urlComponents = URLComponents(url: url,
+                                             resolvingAgainstBaseURL: false) {
             var queryItems = [URLQueryItem]()
             
             for (key, value) in parameters {
-                let stringValue = "\(value)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                let stringValue = "\(value)".addingPercentEncoding(withAllowedCharacters: .urlPasswordAllowed)
                 let queryItem = URLQueryItem(name: key, value: stringValue)
                 queryItems.append(queryItem)
             }

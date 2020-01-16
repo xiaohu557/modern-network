@@ -36,7 +36,7 @@ extension GitHubService: EndpointType {
         case .hottestRepositories(let count):
             let params = ["sort": "stars",
                           "order": "desc",
-                          "q": "created:>`date -v-3d '+%Y-%m-%d'`",
+                          "q": "created:>2019-01-01",
                           "page": "1",
                           "per_page": "\(count)"]
             return .requestWith(payload: params, encoding: .URLEncoding)

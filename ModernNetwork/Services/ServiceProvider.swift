@@ -41,7 +41,7 @@ public class ServiceProvider<Endpoint: EndpointType>: ServiceProviderType {
         
         do {
             let request = try self.buildRequest(for: endpoint)
-            
+
             task = session.dataTask(with: request, completionHandler: { [weak self] data, response, error in
                 
                 if let error = error  {

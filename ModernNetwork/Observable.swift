@@ -20,7 +20,8 @@ public class Observable<T> {
     }
 
     @discardableResult
-    public func bind(andFire fire: Bool = true, observer: @escaping Observer) -> Disposable {
+    public func bind(andFire fire: Bool = true,
+                     observer: @escaping Observer) -> Disposable {
         let id = UUID()
 
         let disp = Disposable(uuid: id) { [weak self] in
